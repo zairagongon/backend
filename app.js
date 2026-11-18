@@ -3,6 +3,7 @@ import cors from 'cors';
 
 import bookRoutes from './routes/bookRoute.js';
 import studentRoutes from './routes/studentRoute.js';
+import userRoutes from "./routes/userRoutes.js";
 
 let corsOptions = {
     origin: 'http://localhost:5173'
@@ -15,6 +16,7 @@ app.use(cors(corsOptions));
 
 app.use('/book', bookRoutes);
 app.use('/student', studentRoutes);
+app.use('/user', userRoutes);
 
 
 try {
